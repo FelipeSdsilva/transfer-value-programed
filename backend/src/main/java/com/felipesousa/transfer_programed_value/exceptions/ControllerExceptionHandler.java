@@ -30,7 +30,7 @@ public class ControllerExceptionHandler {
     }
 
     @ExceptionHandler(DateRageInvalidException.class)
-    public ResponseEntity<StandardError> dateRageInvalid(ResourceNotFoundException e, HttpServletRequest request) {
+    public ResponseEntity<StandardError> dateRageInvalid(DateRageInvalidException e, HttpServletRequest request) {
         HttpStatus status = HttpStatus.NOT_ACCEPTABLE;
         StandardError err = StandardError.builder()
                 .timestamp(Instant.now())
