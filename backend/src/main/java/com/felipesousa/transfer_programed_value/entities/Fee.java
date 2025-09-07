@@ -1,17 +1,10 @@
 package com.felipesousa.transfer_programed_value.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Column;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 
@@ -19,8 +12,8 @@ import java.time.Instant;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tb_transfer_fee")
-public class TransferFee {
+@Table(name = "tb_fee")
+public class Fee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
